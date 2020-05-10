@@ -30,6 +30,8 @@ class MainActivity : CaptureActivity() {
             text=text+it;
         }
         Toast.makeText(this,text,Toast.LENGTH_LONG).show()
+	
+	restartPreviewAfterDelay(1000)
     }
 
     override fun decodeMode(): Int {
@@ -48,5 +50,8 @@ DecodeThread.ALL_MODE = 0X300;            同时识别条码和二维码，两�
 ```kotlin
 override fun handleScanResult(result: Result?) {}
 ```
-这个方法可以对扫描结果进行处理 
-```result.getStringList()     返回识别结果列表
+这个方法可以对扫描结果进行处理，返回识别结果列表
+```
+result.getStringList()
+```  
+处理完要调用  restartPreviewAfterDelay(1000)，进行下一次识别
