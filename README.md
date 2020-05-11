@@ -25,9 +25,9 @@ class MainActivity : CaptureActivity() {
         super.onCreate(savedInstanceState)
     }
 
+    //这个方法可以对扫描结果进行处理，返回识别结果：字符串列表
     override fun handleScanResult(result: Result?) {
         var text=""
-	//这个方法可以对扫描结果进行处理，返回识别结果：字符串列表
         result?.stringList?.forEach {
             text=text+it;
         }
