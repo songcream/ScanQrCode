@@ -47,10 +47,7 @@ DecodeThread.BARCODE_MODE = 0X100;        扫条码模式
 DecodeThread.QRCODE_MODE = 0X200;         扫二维码模式
 DecodeThread.ALL_MODE = 0X300;            同时识别条码和二维码，两者都可以扫
 ```
-```kotlin
-override fun handleScanResult(result: Result?) {}
-```
-这个方法可以对扫描结果进行处理，返回识别结果列表
+```kotlin override fun handleScanResult(result: Result?) {}``` 这个方法可以对扫描结果进行处理，返回识别结果列表
 ```kotlin
 result.getStringList()
 ```  
