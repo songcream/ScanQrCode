@@ -2,7 +2,7 @@
 ScanQrCode 可以轻松的实现多个条码的扫码和二维码扫描，并且可以自定义布局，无需手动写代码自己申请权限，一句话实现扫码功能
 
 在项目的build.gradle中添加
-```
+```gradle
 allprojects {
 	repositories {
 		...
@@ -11,7 +11,7 @@ allprojects {
 }
 ```
 在使用的module的build.gradle中添加
-```
+```gradle
 dependencies {
 	  implementation 'com.github.songcream:ScanQrCode:1.0.0'
 }
@@ -47,12 +47,11 @@ DecodeThread.BARCODE_MODE = 0X100;        扫条码模式
 DecodeThread.QRCODE_MODE = 0X200;         扫二维码模式
 DecodeThread.ALL_MODE = 0X300;            同时识别条码和二维码，两者都可以扫
 ```
-
 ```kotlin
 override fun handleScanResult(result: Result?) {}
 ```
 这个方法可以对扫描结果进行处理，返回识别结果列表
-```kotlinkotlin
+```kotlin
 result.getStringList()
 ```  
-处理完要调用  restartPreviewAfterDelay(1000)，进行下一次识别
+处理完要调用 ```kotlin restartPreviewAfterDelay(1000)```，进行下一次识别
