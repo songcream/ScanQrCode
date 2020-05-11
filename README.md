@@ -16,7 +16,7 @@ dependencies {
 	  implementation 'com.github.songcream:ScanQrCode:1.0.0'
 }
 ```
-要使用的Activity继承CaptureActivity，并且实现handleScanResult(result: Result?) 和 decodeMode() 这两个方法
+要使用的Activity继承CaptureActivity，并且实现```handleScanResult(result: Result?)``` 和 ```decodeMode()``` 这两个方法
 代码如下：
 ```kotlin
 class MainActivity : CaptureActivity() {
