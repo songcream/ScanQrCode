@@ -2,19 +2,20 @@
 ScanQrCode 可以轻松的实现多个条码的扫码和二维码扫描，并且可以自定义布局，无需手动写代码自己申请权限，一句话实现扫码功能
 
 在项目的build.gradle中添加
-
+```
 allprojects {
 	repositories {
 		...
 		maven { url 'https://jitpack.io' }
 	}
 }
+```
 在使用的module的build.gradle中添加
-
+```
 dependencies {
 	  implementation 'com.github.songcream:ScanQrCode:1.0.0'
 }
-
+```
 要使用的Activity继承CaptureActivity，并且实现handleScanResult(result: Result?) 和 decodeMode() 这两个方法
 代码如下：
 ```kotlin
